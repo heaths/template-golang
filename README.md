@@ -1,8 +1,10 @@
 # {{param "name" (param "github.repo") "What is your project name?" | titlecase}}
 
+{{if (param "badges" true "Do you need badges?") -}}
 [![releases](https://img.shields.io/github/v/release/{{param "github.owner"}}/{{param "github.repo"}}.svg?logo=github)](https://github.com/{{param "github.owner"}}/{{param "github.repo"}}/releases/latest)
 [![reference](https://pkg.go.dev/badge/github.com/{{param "github.owner"}}/{{param "github.repo"}}.svg)](https://pkg.go.dev/github.com/{{param "github.owner"}}/{{param "github.repo"}})
 [![ci](https://github.com/{{param "github.owner"}}/{{param "github.repo"}}/actions/workflows/ci.yml/badge.svg?event=push)](https://github.com/{{param "github.owner"}}/{{param "github.repo"}}/actions/workflows/ci.yml)
+{{- end -}}
 
 <!-- {{if 0}} -->
 To create a new repository from this template repository for Go projects,
