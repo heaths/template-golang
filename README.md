@@ -7,7 +7,7 @@
 {{if (param "badges" true "Do you need badges?") -}}
 {{if (param "release") -}}
 [![releases](https://img.shields.io/github/v/release/{{param "github.owner"}}/{{param "github.repo"}}.svg?logo=github)](https://github.com/{{param "github.owner"}}/{{param "github.repo"}}/releases/latest)
-{{- end -}}
+{{- end}}
 [![reference](https://pkg.go.dev/badge/github.com/{{param "github.owner"}}/{{param "github.repo"}}.svg)](https://pkg.go.dev/github.com/{{param "github.owner"}}/{{param "github.repo"}})
 [![ci](https://github.com/{{param "github.owner"}}/{{param "github.repo"}}/actions/workflows/ci.yml/badge.svg?event=push)](https://github.com/{{param "github.owner"}}/{{param "github.repo"}}/actions/workflows/ci.yml)
 {{- end}}
