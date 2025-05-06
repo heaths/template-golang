@@ -1,3 +1,3 @@
-module github.com/{{param "github.owner"}}/{{param "name" (param "github.repo") "What is your project name?" | lowercase}}
+module github.com/{{param "github.owner"}}/{{param "github.repo"}}
 
 go 1.21
